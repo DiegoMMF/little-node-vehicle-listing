@@ -14,6 +14,7 @@ const { dummyList } = require('./helpers/dummyList');
 const showList = require('./controllers/showList');
 const mostExpensive = require('./controllers/mostExpensive');
 const cheapest = require('./controllers/cheapestVehicle');
+const includesLetter = require('./controllers/includesLetter');
 
 const hostname = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000;
@@ -30,7 +31,7 @@ mostExpensive(dummyList);
 
 cheapest(dummyList);
 
-// includesLetter()
+includesLetter(dummyList);
 
 // sortByCost()
 
