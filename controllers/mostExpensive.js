@@ -1,19 +1,36 @@
-const { dummyList } = require("./dummyList")
+const comasPorPuntos = (priceInString) => {
+    const invertedPunctuation = priceInString
+        .replace(".", "")
+        .replace(",", ".");
+    const priceInNumber = parseFloat(invertedPunctuation, 10);
+    return priceInNumber;
+};
 
-const reducer = (max, current) => {
-    console.log("Math.max(max, current): ", Math.max(max, current));
+const reducerToMax = (max, current) => {
     return Math.max(max, current);
 };
 
-const mayorPrecio = dummyList
-                    .map(currentItem => {
-                        // console.log("Number(currentItem.precio): ", Number(currentItem.precio));
-                        // console.log("currentItem.precio: ", currentItem.precio);
-                        // console.log(currentItem.precio.replace(".", "").replace(",", "."));
-                        let comasPorPuntos = currentItem.precio.replace(".", "").replace(",", ".")
-                        // console.log("parseInt(currentItem.precio, 10): ", parseFloat(comasPorPuntos, 10));
-                        return parseFloat(comasPorPuntos, 10);
-                    })
-                    .reduce(reducer, -Infinity);
+const renderMostExpensive = (matchingArray) => {
+    if (matchingArray.length === 1) {
+        console.log(`Vehículo más caro: ${matchingArray[0].marca} ${matchingArray[0].modelo}`);
+    } else {
+        console.log("Hubo más de un vehículo con el mayor precio.");
+        console.log("Los vehículos más caros son los siguientes:");
+        matchingArray.forEach(element => {
+            console.log(element.marca, element.modelo);
+        });
+    }
+}
 
-console.log(mayorPrecio);
+const mostExpensive = (vehiclesArray) => {
+
+    const mayorPrecioInNumber = vehiclesArray
+        .map(currentItem => comasPorPuntos(currentItem.precio))
+        .reduce(reducerToMax, -Infinity);
+
+    const matchingArray = vehiclesArray.filter(vehicle => comasPorPuntos(vehicle.precio) === mayorPrecioInNumber);
+
+    renderMostExpensive(matchingArray);
+}
+
+module.exports = mostExpensive;

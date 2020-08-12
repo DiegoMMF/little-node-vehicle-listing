@@ -1,9 +1,11 @@
-const { dummyList } = require("./dummyList");
-
-for (item in dummyList) {
-    if (dummyList[item].tipo === "auto") {
-        console.log(`Marca: ${dummyList[item].marca} // Modelo: ${dummyList[item].modelo} // Puertas: ${dummyList[item].puertas} // Precio: ${dummyList[item].precio}`);
-    } else {
-        console.log(`Marca: ${dummyList[item].marca} // Modelo: ${dummyList[item].modelo} // Cilindrada: ${dummyList[item].cilindrada} // Precio: ${dummyList[item].precio}`);
+const showList = (vehiclesArray) => {
+    for (item in vehiclesArray) {
+        if (vehiclesArray[item].tipo === "auto") {
+            console.log(`Marca: ${vehiclesArray[item].marca} // Modelo: ${vehiclesArray[item].modelo} // Puertas: ${vehiclesArray[item].puertas} // Precio: $${vehiclesArray[item].precio}`);
+        } else {
+            console.log(`Marca: ${vehiclesArray[item].marca} // Modelo: ${vehiclesArray[item].modelo} // Cilindrada: ${vehiclesArray[item].cilindrada} // Precio: $${vehiclesArray[item].precio}`);
+        }
     }
 }
+
+module.exports = showList;
