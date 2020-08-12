@@ -10,9 +10,10 @@
 
 const http = require('http');
 
-const { dummyList } = require('./controllers/dummyList');
+const { dummyList } = require('./helpers/dummyList');
 const showList = require('./controllers/showList');
 const mostExpensive = require('./controllers/mostExpensive');
+const cheapest = require('./controllers/cheapestVehicle');
 
 const hostname = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000;
@@ -27,7 +28,7 @@ showList(dummyList);
 
 mostExpensive(dummyList);
 
-// cheapestVehicle()
+cheapest(dummyList);
 
 // includesLetter()
 
