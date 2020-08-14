@@ -15,6 +15,7 @@ const showList = require('./controllers/showList');
 const mostExpensive = require('./controllers/mostExpensive');
 const cheapest = require('./controllers/cheapestVehicle');
 const includesLetter = require('./controllers/includesLetter');
+const sortByCostWrapper = require('./controllers/sortByCost');
 
 const hostname = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000;
@@ -33,16 +34,16 @@ cheapest(dummyList);
 
 includesLetter(dummyList);
 
-// sortByCost()
+sortByCostWrapper(dummyList);
 
-server.listen(port, hostname, () => {
+server.listen(port/* , hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`)
-});
+} */);
 
 process.on('SIGTERM', () => {
-    server.close(() => {
+    server.close(/* () => {
         console.log('Proceso Terminado.\nGracias por elegirnos!\n(jajaja)')
-    })
+    } */)
 });
 
 process.kill(process.pid, "SIGTERM");
