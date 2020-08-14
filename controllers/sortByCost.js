@@ -1,11 +1,8 @@
-/**
- * 
- */
 const convertirPrecio = require("../helpers/convertirPrecio");
 const reducerToMax = (max, current) => { return Math.max(max, current); };
 
 /**
- * 
+ * función recursiva que va extrayendo y pintando en consola el vehículo con mayor precio
  * @param { Array<Object> } vehiclesArray 
  */
 const sortByCost = (vehiclesArray) => {
@@ -31,7 +28,7 @@ const sortByCost = (vehiclesArray) => {
 }
 
 /**
- * 
+ * función principal que aclara la información que será pintada por sortByCost
  * @param { Array<Object> } vehiclesArray 
  */
 const sortByCostWrapper = (vehiclesArray) => {

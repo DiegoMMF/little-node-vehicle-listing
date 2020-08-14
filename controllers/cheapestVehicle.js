@@ -1,9 +1,4 @@
-/**
- * @fileoverview here we receive a vehicles array and return the cheaper of them in the console
- */
-
- const convertirPrecio = require("../helpers/convertirPrecio");
-
+const convertirPrecio = require("../helpers/convertirPrecio");
 
 /**
  * extracts the lower out of two numbers

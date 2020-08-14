@@ -1,5 +1,5 @@
 /**
- * 
+ * sólo filtramos los vehículos cuyos modelos tienen la letra Y
  * @param { Array<Object> } vehiclesArray 
  */
 const includesY = (vehiclesArray) => {
@@ -10,7 +10,7 @@ const includesY = (vehiclesArray) => {
 }
 
 /**
- * 
+ * Aquí nos encargamos de pintar en pantalla lo que corresponda.
  * @param { Array<Object> } matchingArray 
  */
 const renderIncludeLetter = (matchingArray) => {
@@ -27,7 +27,7 @@ const renderIncludeLetter = (matchingArray) => {
 }
 
 /**
- * 
+ * función principal que exportamos que recurre a las dos anteriores
  * @param { Array<Object> } vehiclesArray 
  */
 const includesLetter = (vehiclesArray) => {

@@ -1,3 +1,7 @@
+/**
+ * @param { String } stringValue recibimos el precio en string y lo convertimos a número
+ * respetando decimales y todo.
+ */
 const convertirPrecio = (stringValue) => {
     const invertedPunctuation = stringValue
         .replace(".", "")

@@ -1,7 +1,7 @@
 const convertirPrecio = require("../helpers/convertirPrecio");
 
 /**
- * 
+ * Devuelve el mayor de dos números.
  * @param {*} max 
  * @param {*} current 
  */
@@ -10,7 +10,7 @@ const reducerToMax = (max, current) => {
 };
 
 /**
- * 
+ * Contempla la posibilidad de que haya más de un auto con el mismo (mayor) precio
  * @param { Array<Object> } matchingArray 
  */
 const renderMostExpensive = (matchingArray) => {
@@ -26,7 +26,7 @@ const renderMostExpensive = (matchingArray) => {
 }
 
 /**
- * 
+ * función principal que recurre a las dos anteriores y que es llamada en index.js
  * @param { Array<Object> } vehiclesArray 
  */
 const mostExpensive = (vehiclesArray) => {

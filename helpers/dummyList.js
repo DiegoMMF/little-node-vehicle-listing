@@ -2,7 +2,6 @@
  * Cargar la lista de autos en un único método.
  * No hay ingreso por pantalla de ningún tipo.
  */
-
 exports.dummyList = [
     {
         marca: "Peugeot",

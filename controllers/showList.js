@@ -1,5 +1,6 @@
  /**
-  * 
+  * simple renderizador del arreglo de vehículos,
+  * pero que distingue entre motos y autos
   * @param { Array<Object> } vehiclesArray 
   */
 const showList = (vehiclesArray) => {
