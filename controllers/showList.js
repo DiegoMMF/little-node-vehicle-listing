@@ -1,3 +1,7 @@
+ /**
+  * 
+  * @param { Array<Object> } vehiclesArray 
+  */
 const showList = (vehiclesArray) => {
     for (item in vehiclesArray) {
         if (vehiclesArray[item].tipo === "auto") {

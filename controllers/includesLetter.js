@@ -1,3 +1,7 @@
+/**
+ * 
+ * @param { Array<Object> } vehiclesArray 
+ */
 const includesY = (vehiclesArray) => {
     const letra = 'Y';
     const matchingArray = vehiclesArray
@@ -5,6 +9,10 @@ const includesY = (vehiclesArray) => {
     return matchingArray;
 }
 
+/**
+ * 
+ * @param { Array<Object> } matchingArray 
+ */
 const renderIncludeLetter = (matchingArray) => {
     if (matchingArray.length === 1) {
         console.log(`\nVehículo que contiene en el modelo la letra 'Y': ${matchingArray[0].marca} ${matchingArray[0].modelo} $${matchingArray[0].precio}`);
@@ -18,6 +26,10 @@ const renderIncludeLetter = (matchingArray) => {
     }
 }
 
+/**
+ * 
+ * @param { Array<Object> } vehiclesArray 
+ */
 const includesLetter = (vehiclesArray) => {
 
     const vehiclesIncluidingY = includesY(vehiclesArray);

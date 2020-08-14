@@ -1,9 +1,18 @@
 const convertirPrecio = require("../helpers/convertirPrecio");
 
+/**
+ * 
+ * @param {*} max 
+ * @param {*} current 
+ */
 const reducerToMax = (max, current) => {
     return Math.max(max, current);
 };
 
+/**
+ * 
+ * @param { Array<Object> } matchingArray 
+ */
 const renderMostExpensive = (matchingArray) => {
     if (matchingArray.length === 1) {
         console.log(`\nVehículo más caro: ${matchingArray[0].marca} ${matchingArray[0].modelo}`);
@@ -16,6 +25,10 @@ const renderMostExpensive = (matchingArray) => {
     }
 }
 
+/**
+ * 
+ * @param { Array<Object> } vehiclesArray 
+ */
 const mostExpensive = (vehiclesArray) => {
 
     const mayorPrecioInNumber = vehiclesArray

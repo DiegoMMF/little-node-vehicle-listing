@@ -1,15 +1,20 @@
+/**
+ * 
+ */
 const convertirPrecio = require("../helpers/convertirPrecio");
 const reducerToMax = (max, current) => { return Math.max(max, current); };
 
+/**
+ * 
+ * @param { Array<Object> } vehiclesArray 
+ */
 const sortByCost = (vehiclesArray) => {
     // creamos dos variables, una para los autos más caros (con igual precio) y la otra para los restantes
     let arregloAReducir = vehiclesArray;
 
     // bucle donde extraemos el arreglo de los autos más caros
     for (let i = 0; i < arregloAReducir.length; i++) {
-        // console.log("vehiclesArray.length: ", vehiclesArray.length);
-        // console.log("i: ", i);
-
+        
         // buscamos el mayor precio
         let mayorPrecioInNumber = arregloAReducir
             .map(currentItem => convertirPrecio(currentItem.precio))
@@ -19,13 +24,16 @@ const sortByCost = (vehiclesArray) => {
 
             renderThisArray = arregloAReducir.splice(i, 1);
             console.log(`${renderThisArray[0].marca} ${renderThisArray[0].modelo}`);
-            // console.log("renderThis:", renderThisArray);
             sortByCost(arregloAReducir)
 
         }
     }
 }
 
+/**
+ * 
+ * @param { Array<Object> } vehiclesArray 
+ */
 const sortByCostWrapper = (vehiclesArray) => {
 
     // pintamos el texto genérico previo a los datos

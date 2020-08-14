@@ -1,13 +1,3 @@
-/**
- * - cheapestVehicle()
- * - includesLetter()
- * - sortByCost()
- * 
- * La solución debe ser orientada a objetos.
- * La salida es por consola y exactamente como se requiere.
- * Usar solamente librerías provistas por Node JS.
- */
-
 const http = require('http');
 
 const { dummyList } = require('./helpers/dummyList');
@@ -36,14 +26,10 @@ includesLetter(dummyList);
 
 sortByCostWrapper(dummyList);
 
-server.listen(port/* , hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`)
-} */);
+server.listen(process.env.PORT);
 
 process.on('SIGTERM', () => {
-    server.close(/* () => {
-        console.log('Proceso Terminado.\nGracias por elegirnos!\n(jajaja)')
-    } */)
+    server.close()
 });
 
 process.kill(process.pid, "SIGTERM");
